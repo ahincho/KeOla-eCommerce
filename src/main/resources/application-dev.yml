@@ -1,0 +1,19 @@
+spring:
+  r2dbc:
+    url: ${R2DBC_URL:r2dbc:postgresql://localhost:5432/ecommerce}
+    username: ${R2DBC_USERNAME:postgres}
+    password: ${R2DBC_PASSWORD:postgres}
+  flyway:
+    url: ${FLYWAY_URL:jdbc:postgresql://localhost:5432/ecommerce}
+    user: ${FLYWAY_USER:postgres}
+    password: ${FLYWAY_PASSWORD:postgres}
+    locations: ${FLYWAY_LOCATIONS:classpath:db/migrations}
+  data:
+    mongodb:
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+      database: ${MONGODB_DB:ecommerce}
+      username: ${MONGODB_USERNAME:mongodb}
+      password: ${MONGODB_PASSWORD:mongodb}
+server:
+  port: ${SERVER_PORT:8080}
