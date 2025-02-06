@@ -15,5 +15,6 @@ spring:
       database: ${MONGODB_DB:ecommerce}
       username: ${MONGODB_USERNAME:mongodb}
       password: ${MONGODB_PASSWORD:mongodb}
+      authentication-database: admin
 server:
   port: ${SERVER_PORT:8080}

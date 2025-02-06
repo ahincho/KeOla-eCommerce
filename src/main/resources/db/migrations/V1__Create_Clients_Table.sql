@@ -1,6 +1,6 @@
 -- V1 - Create Clients Table
 CREATE TABLE clients (
-    id VARCHAR(256) PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(64) NOT NULL,
     lastname VARCHAR(64) NOT NULL,
     email VARCHAR(64) UNIQUE NOT NULL,
