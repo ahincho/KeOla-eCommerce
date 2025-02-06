@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "d41963a1-1007-4a23-86d9-b8935b74ac32",
+		"name": "eCommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28629003"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Create One Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Angel Eduardo\",\r\n    \"lastname\": \"Hincho Jove\",\r\n    \"email\": \"ahincho@unsa.edu.pe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/{{clients}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{clients}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{clients}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{clients}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{clients}}/2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{clients}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One Client",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fabiola Grissel\",\r\n    \"lastname\": \"Tapara Quispe\",\r\n    \"email\": \"ftapara@unsa.edu.pe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/{{clients}}/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{clients}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{clients}}/2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{clients}}",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create One Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Laptop Dell XPS 13\",\r\n    \"price\": 1299.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/{{products}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{products}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{products}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{products}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{products}}/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{products}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Samsung Galaxy S24\",\r\n    \"price\": 999.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/{{products}}/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{products}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{products}}/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{products}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create One Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 1,\r\n    \"orderDetails\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"quantity\": 5\r\n        },\r\n        {\r\n            \"productId\": 3,\r\n            \"quantity\": 10\r\n        },\r\n        {\r\n            \"productId\": 5,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/{{orders}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{orders}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{orders}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{orders}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{orders}}/67a4b6330e4f2239f15999d2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{orders}}",
+								"67a4b6330e4f2239f15999d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/{{orders}}/67a4b6330e4f2239f15999d2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{orders}}",
+								"67a4b6330e4f2239f15999d2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "clients",
+			"value": "api/v1/clients",
+			"type": "string"
+		},
+		{
+			"key": "products",
+			"value": "api/v1/products",
+			"type": "string"
+		},
+		{
+			"key": "orders",
+			"value": "api/v1/orders",
+			"type": "string"
+		}
+	]
+}

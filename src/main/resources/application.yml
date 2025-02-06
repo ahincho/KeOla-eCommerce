@@ -1,3 +1,5 @@
 spring:
   application:
     name: eCommerce
+  profiles:
+    active: ${SPRING_PROFILE:dev}

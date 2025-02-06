@@ -1,0 +1,9 @@
+-- V1 - Create Clients Table
+CREATE TABLE clients (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    lastname VARCHAR(64) NOT NULL,
+    email VARCHAR(64) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
