@@ -1,9 +1,10 @@
-package com.keola.ecommerce.domain.models;
+package com.keola.ecommerce.infrastructure.adapters.in.rest.dtos.clients;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -12,12 +13,12 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Product {
-    @EqualsAndHashCode.Include
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ClientResponse {
     private Integer id;
     private String name;
-    private Double price;
+    private String lastname;
+    private String email;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

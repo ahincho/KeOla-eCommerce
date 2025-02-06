@@ -4,10 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EcommerceApplicationTests {
-
+class ECommerceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
